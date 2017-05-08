@@ -1,6 +1,13 @@
 # CarND-Controls-PID
 Self-Driving Car Engineer Nanodegree Program
 
+## Reflection
+
+
+## Video of the car in the simulator
+
+[![Self Driving Car Nanodegree PID control speed and steering](http://img.youtube.com/vi/nbVoUx6fCeo/0.jpg)](http://www.youtube.com/watch?v=nbVoUx6fCeo)
+
 ---
 
 ## Dependencies
