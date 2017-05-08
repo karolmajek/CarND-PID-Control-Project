@@ -1,8 +1,29 @@
 # CarND-Controls-PID
 Self-Driving Car Engineer Nanodegree Program
 
+This software implements PID controller for both:
+- steering - minimize cross trach error
+- speed - minimize difference from speed value set
+
 ## Reflection
 
+PID for path following can be easily implemented in simulation. Tunning PID on a real car will be very difficult/dangerous, especially when starting from P only.
+
+The result is what I expect from PID - PID gives good results since many years in automation and many other fields. It is not the best controller, but most popular and easy to tune.
+
+My parameters:
+
+| Kp  |  Ki  |  Kd  |
+|-----|------|------|
+| 0.2 | 0.08 |  2   |
+
+Kp is set to small value to increase stability. For same reason Ki is low. Kd is set to 2 to achieve fast enough correction of steering to reduce overshoot.
+
+Increasing Kd will lead to more aggressive reactions for overshoot. Increasing Ki and Kp will lead to instability (oscillations with increasing amplitude).
+
+Using non-zero Ki is needed to reduce error to zero.
+
+Same parameters are used for speed controller.
 
 ## Video of the car in the simulator
 
@@ -32,7 +53,7 @@ Self-Driving Car Engineer Nanodegree Program
 1. Clone this repo.
 2. Make a build directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run it: `./pid`. 
+4. Run it: `./pid`.
 
 ## Editor Settings
 
